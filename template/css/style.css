@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Bungee Inline';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Bungee Inline'), local('BungeeInline-Regular'), url(https://fonts.gstatic.com/s/bungeeinline/v5/Gg8zN58UcgnlCweMrih332VuPGV__A.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bungee Shade';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Bungee Shade'), local('BungeeShade-Regular'), url(https://fonts.gstatic.com/s/bungeeshade/v5/DtVkJxarWL0t2KdzK3oI_jkc6SjW.ttf) format('truetype');
+}
 body {
   background: #000000;
   margin: 0;
@@ -74,7 +88,11 @@ nav .active {
   background: #252525;
   border-bottom: 2px solid rgba(255, 0, 0);
 }
+#section1 h3 {
+  font-family: 'Bungee Inline', cursive;
+}
 #section1 p {
+  font-family: 'Heebo', sans-serif;
   overflow: hidden;
 }
 #section2 {
@@ -84,6 +102,10 @@ nav .active {
   height: 200px;
   background: #414141;
   border-bottom: 2px solid rgba(255, 0, 0);
+}
+#section2 p {
+  font-family: 'Bungee Inline', cursive;
+  color: #FFFFFF;
 }
 #section3 {
   margin-left: 0;

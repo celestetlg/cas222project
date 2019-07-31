@@ -1,5 +1,7 @@
 @import "palette";
 @import "mixins";
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Bungee+Shade&display=swap');
+
 body {
   background: @darkColor;
   margin: 0;
@@ -76,19 +78,31 @@ nav {
   height: 250px;
   background: @color3;
   border-bottom: 2px solid @color1;
+
+  h3 {
+    font-family: 'Bungee Inline', cursive;
+  }
+
   p{
+    font-family: 'Heebo', sans-serif;
     overflow: hidden;
 
   }
 }
 
 #section2 {
+
   margin-top: 0;
   margin-left: 0;
   margin-bottom: 0;
   height: 200px;
   background: @color2;
   border-bottom: 2px solid @color1;
+
+  p {
+    font-family: 'Bungee Inline', cursive;
+    color: @lightColor;
+  }
 }
 
 #section3 {

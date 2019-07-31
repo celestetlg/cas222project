@@ -1,5 +1,5 @@
 <header>
-    <h1><span>Ace in the Hole</span> Sport Events</h1>
+    <h1><span>Ace in the Hole</span> Multisport Events</h1>
 </header>
 <nav>
     <div class="toggle">
