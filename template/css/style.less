@@ -76,7 +76,6 @@ nav {
   color: @lightColor;
   line-height: 1.5em;
   height: 250px;
-  background: @color3;
   border-bottom: 2px solid @color1;
 
   h3 {
@@ -96,7 +95,6 @@ nav {
   margin-left: 0;
   margin-bottom: 0;
   height: 200px;
-  background: @color2;
   border-bottom: 2px solid @color1;
 
   p {
@@ -109,7 +107,6 @@ nav {
   margin-left: 0;
   margin-top: 0;
   height: 200px;
-  background: @color2;
 }
 
 footer {
@@ -128,6 +125,7 @@ footer {
 @media screen and (min-width: 768px) {
   #section2 {
     border-right: 2px solid @color1;
+
     border-bottom: none;
     margin-right: 2px;
   }
@@ -141,6 +139,12 @@ footer {
 @media screen and (min-width: 1025px) {
   header{
     width: 30%;
+    span {
+      font-size: 2em;
+    }
+    h1 {
+      font-size: 1.3em;
+    }
   }
   nav {
     font-size: .8em;
