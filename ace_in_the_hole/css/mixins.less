@@ -1,0 +1,222 @@
+// out: null
+
+@import 'palette.less';
+//heading style
+.headingStyle(@paramColor: @darkColor, @paramSize: 1.8em) {
+  color: @paramColor;
+  font-size: @paramSize;
+  font-weight: bold;
+  line-height: @paramSize;
+  text-transform: uppercase;
+}
+
+// tab section style start
+.tabSection {
+  .tablink {
+    height: 70px;
+    font-family: 'kanit', sans-serif;
+    background-color: @darkColor;
+    color: @color1;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 14px;
+    width: 25%;
+    overflow-wrap: break-word;
+  }
+
+  .tablink:hover {
+    background-color: @color1;
+    color: #222222;
+  }
+
+
+  .tabcontent {
+    color: @darkColor;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+    box-shadow: 0 0 15px #939393;
+  }
+
+  .tabcontent ul{
+    text-align: center;
+    line-height: 2em;
+  }
+
+
+  #Event{background-color: @lightColor;}
+  #About{background-color: @lightColor;}
+  #Schedule{background-color: @lightColor;}
+  #Weather{background-color: @lightColor;}
+  #packet {background-color: @lightColor;}
+  #satEvent {background-color: @lightColor;}
+  #sunEvent {background-color: @lightColor;}
+  #precautions {background-color: @lightColor;}
+}
+
+//end of tab section style
+
+//start of customized radio button
+.radioButton{
+  .containerRadio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 1px solid @darkColor;
+    border-radius: 50%;
+  }
+  .containerRadio:hover input ~ .circle {
+    background-color: #ccc;
+  }
+  .containerRadio input:checked ~ .circle {
+    background-color: #2196F3;
+  }
+  .circle:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .containerRadio input:checked ~ .circle:after {
+    display: block;
+  }
+  .containerRadio .circle:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: @lightColor;
+  }
+}
+//end of customized radio button
+
+//start of top button style
+.scrollTop {
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 130px;
+    right: 0;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: @darkColor;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'kanit', sans-serif;
+  }
+
+  #myBtn:hover {
+    background-color: #555;
+  }
+}
+//end of top button style
+
+//sticky navigation
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+//collapse style
+.colCourse {
+  display: block;
+  .collapsible {
+    font-family: 'kanit', sans-serif;
+    background-color: transparent;
+    color: @darkColor;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2em;
+  }
+
+  .active1, .collapsible:hover {
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 16px 0 rgba(0, 0, 0, 0.4);
+
+  }
+
+  .collapsible:after {
+    content: '\002b';
+    color: @color1;
+    margin-left: 5px;
+    float: right;
+  }
+
+  .active1:after {
+    content: "\2212";
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: @darkColor;
+    width: 100%;
+    font-size: 1em;
+    line-height: 1em;
+    color: @lightColor;
+    p{
+      text-align: left;
+    }
+    ul{
+      margin: 5px;
+      font-family: monospace;
+      font-weight: bold;
+      li{
+        padding: 10px;
+        text-align: left;
+        &:before{
+          content: "\2022";
+          color: red;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: 5px;
+        }
+      }
+    }
+    span {
+      .headingStyle(@lightColor;1.2em);
+    }
+    #rightList{
+      p{
+        text-align: left !important;
+      }
+      ul{
+        text-align: left;
+
+      }
+    }
+  }
+}
+

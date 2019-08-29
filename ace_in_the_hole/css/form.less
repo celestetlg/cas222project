@@ -1,0 +1,263 @@
+@import "palette";
+@import "mixins";
+/* Global */
+body {
+  background: @darkColor;
+  margin: 0;
+  padding: 0;
+  font-family: 'kanit', sans-serif;
+}
+
+#navBar{
+  .sticky;
+  background: @darkColor;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  header {
+    padding: 5px;
+    float: left;
+    width: 70%;
+    font-size: 1em;
+    h1 {
+      span {
+        padding-top: 10px;
+        .headingStyle(@color1, 1.2em)
+      }
+      color: @lightColor;
+    }
+
+  }
+
+  nav {
+    width: 100%;
+    ul {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      display: none;
+      li {
+        list-style: none;
+        display: block;
+        text-align: center;
+        padding: 15px;
+        &:hover {
+          height: 30px;
+          background: @color1;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+    .toggle {
+      width: 100%;
+      padding: 10px 20px;
+      text-align: right;
+      box-sizing: border-box;
+      color: @color1;
+      font-size: 30px;
+      display: block;
+    }
+    .active {
+      background: @darkColor;
+      display: block;
+    }
+  }
+}
+main {
+  margin-top: -10px;
+}
+/* end Global */
+.scrollTop;
+
+#form_section {
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 16px;
+  background: #F7F7F7;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  h1 {
+    background: @color2;
+    text-align: center;
+    color: @lightColor;
+    margin: -16px -16px 16px -16px;
+    padding: 20px 0;
+    font-weight: 300;
+  }
+  p {
+    padding: 0;
+    margin: 2% 2% 2% 0;
+  }
+  .number {
+    background: @color2;
+    color: @lightColor;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    font-size: 1em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0;
+  }
+  /* Radio*/
+  .radioButton;
+  /* end custom checkbox effect from w3schools */
+
+  input[type="text"], input[type="number"], input[type="email"],input[type="tel"]{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    display: block;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 2% 2% 4% 0;
+    border: 1px solid @darkColor;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+    &:focus {
+      box-shadow: 0 0 5px @darkColor;
+      padding: 3%;
+      border: 1px solid @darkColor;
+    }
+  }
+  textarea {
+    width: 80%;
+    display: block;
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+  }
+  .submitBtn {
+    width: 100%;
+    background-color: @color2;
+    border: none;
+    color: @lightColor;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+}
+
+/* end of registration page layout mobile */
+
+/* success page styling */
+#success {
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 16px;
+  background: #F7F7F7;
+  display: block;
+  min-height: 400px;
+  line-height: 1.5em;
+  h1{
+    background-color: @color2;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Bungee Inline', cursive;
+  }
+  span {
+    font-size: 1.2em;
+    font-family: 'Heebo', sans-serif;
+    margin-right: 5px;
+  }
+}
+
+/* end of success page styling */
+footer {
+  background: @darkColor;
+  p {
+    color: @lightColor;
+    font-family: "Arial", sans-serif;
+    font-size: .8em;
+    text-align: center;
+  }
+
+  a {
+    color: @lightColor;
+  }
+}
+@media screen and (min-width: 480px) {
+
+}
+@media screen and (min-width: 517px) {
+  #navBar {
+    header {
+      padding: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #navBar {
+    height: 65px;
+    header {
+      width: 33%;
+      padding: 0;
+      margin: 0;
+      span {
+        font-size: 1.5em;
+      }
+      h1 {
+        font-size: 1.3em;
+      }
+    }
+
+    nav {
+      padding-top: 5px;
+      font-size: 1em;
+      width: 100%;
+      .toggle {
+        display: none;
+      }
+      ul {
+        text-align: right;
+        width: 75%;
+        display: block;
+        li {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  #form_section {
+    background-color: rgba(255, 255, 255, 1);
+    color: @darkColor;
+    line-height: 1.5em;
+    display: block;
+
+    h1{
+      font-size: 140%;
+    }
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+
+@media screen and (min-width: 1345px) {
+  #navBar {
+    header {
+      padding-top: 10px;
+      width: 35%;
+    }
+  }
+}
